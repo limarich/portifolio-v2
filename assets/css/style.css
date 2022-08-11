@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&family=Poppins&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid #000; */
+
+}
+:root {
+    font-size: 10px;
+    font-family: 'Montserrat';
+    color: var(--font-color);
+    --body-color: #FBFEFC;
+    --font-color: #6A7C70;
+    --secound-color: #43CB75;
+    --secound-color-light: #57E089;
+    --font-btn: #fff;
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--body-color);
+}
+section {
+    margin-top: 5rem;
+}
+h3,h2 {
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+}
+h3{
+    font-size: 3rem;
+}
+h2 {
+    font-size: 4.5rem;
+}
+p {
+    font-size: 1.8rem;
+    margin-top: 1.8rem;
+}
+button {
+    padding: 2.2rem 1rem 1.5rem 1.5rem;
+    width: 15rem;
+    font-size: 2.2rem;
+    font-weight: 100;
+    color: var(--font-btn);
+    background-color: var(--secound-color);
+    border: none;
+    border-radius: .8rem;
+    display: flex;
+    align-items: center;
+}
+button img {
+    margin-left: 1.5rem;
+}
+/* home-section*/
+.home-container {
+    width: 90rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.profile-pic {
+    background: url("../images/blob.svg") no-repeat;
+    background-size: 100%;
+    width: 40rem;
+    height: 40rem;
+    position: relative;
+}
+.profile-pic img{
+    width: 30rem;
+    border-radius: 50%;
+    position: absolute;
+    right: -1rem;
+    top: 1.2rem;
+}
+.social-midias {
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-right: 15rem;
+}
+.social-midias img {
+    width: 3.5rem;
+    cursor: pointer;
+}
+.profile-container {
+    margin-top: 2rem;
+    display:flex;
+    justify-content: flex-start;
+}
+.profile-description {
+    width: 80%;
+}
+.profile-description span {
+    color: var(--secound-color-light);
+}
+.profile-description button {
+    margin: 4rem;
+}
