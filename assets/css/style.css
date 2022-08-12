@@ -15,9 +15,11 @@
     --font-color: #6A7C70;
     --secound-color: #43CB75;
     --secound-color-light: #57E089;
+    --title-color: #000;
     /* fonts */
     --font-btn: #fff;
     --normal-font-size: 1.5rem;
+    --large-font-size: 2.5rem;
     --header-height: 4.8rem;
     --h1-font-size: 3rem;
     --small-font-size: 1.3rem;
@@ -46,21 +48,15 @@ p {
     margin-top: 1.8rem;
 }
 button {
-    padding: 1.8rem 1.2rem .8rem 1.5rem;
-    width: 15rem;
-    background-color: var(--secound-color);
-    color: var(--font-btn);
     border: none;
     border-radius: .8rem;
-    display: flex;
-    align-items: center;
 }
 button i {
     font-size: 3rem;
     margin-left: 1.5rem;
 }
 button span {
-    font-size: 2rem;
+    font-size: 1.7rem;
     font-weight: 100;
 }
 li {
@@ -78,14 +74,27 @@ a:active i,i:active, i:hover {
     color: var(--secound-color-light);
     transition: color .5s ease-in-out;
 }
+figure {
+    text-align: center;
+}
+img {
+    object-fit: cover;
+}
 /*  Reusable classes*/
 .section--title{
     font-size: var(--h1-font-size);
+    color: var(--title-color);
+    font-family: Poppins;
+    text-transform: uppercase;
+    font-weight: 400;
 }
 .section--subtitle{
     display: block;
     font-size: var(--small-font-size);
+    font-family: Poppins;
     margin-bottom: 4.8rem;
+    font-weight: 200;
+    text-transform: lowercase;
 }
 .section--subtitle,
 .section--title {
@@ -94,6 +103,14 @@ a:active i,i:active, i:hover {
 .container {
     max-width: 76.8rem;
     padding-left:  1.5rem;
+}
+.btn-1 {
+    padding: 1.8rem 1.2rem .8rem 1.5rem;
+    width: 15rem;
+    background-color: var(--secound-color);
+    color: var(--font-btn);
+    display: flex;
+    align-items: center;
 }
 /* header */
 .header {
@@ -222,4 +239,28 @@ a:active i,i:active, i:hover {
 .bio-description mark {
     color: var(--secound-color-light);
     background: none;
+}
+/* about me */
+.about-me--description {
+    text-align: justify;
+    max-width: 88%;
+    margin: 2rem auto;
+}
+.about-me--info {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+.about-me--info .topic {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.about-me--info .topic .topic-title {
+    font-size: var(--large-font-size);
+    color: var(--title-color);
+}
+.about-me .btn-1 {
+    margin: 1rem auto;
 }
