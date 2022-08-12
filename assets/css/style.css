@@ -32,6 +32,7 @@ body {
     font-size: var(--normal-font-size);
 
     background: var(--body-color);
+    overflow-x:  hidden;
 }
 section {
     padding: 3.2rem 0 6.4rem;
@@ -102,21 +103,22 @@ a:active i,i:active, i:hover {
     bottom: 0;
     z-index: 5;
     background-color: var(--body-color);
-    padding: 3rem 2.4rem;
-    
+    padding: 2rem 2.4rem 0.5rem ;
+    border-top: 3px solid #E2E9E5;
 }
+
 .header .close-btn {
     position: absolute;
     right: .5rem;
     top: 0;
     font-size: 3rem;
 }
-.header .actions {
+.header .pages {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 2rem;
 }
-.header .actions .link a {
+.header .pages .link a {
     height: 5rem;
     text-align: center;
     display: flex;
@@ -125,21 +127,45 @@ a:active i,i:active, i:hover {
     align-items: center;
     transition: color 1s ease-in-out;
 }
-.header .actions .link:active a {
+/*  */
+#navbar.desactive .pages, #navbar.desactive .close-btn {
+    display: none;
+} 
+#navbar .pages {
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+}
+.header .navbar .actions {
+    display: none;
+}
+.header .navbar.desactive .actions {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 2.5rem;
+}
+.header .logo {
+    position: absolute;
+    left: 2rem;
+    font-size: 1.8rem;
+}
+.header .actions i {
+    margin-left: 1rem;
+}
+.header .pages .link:active a {
     color: var(--secound-color-light);
 }
-.header .actions .link a i {
+.header .pages .link a i {
     font-size: 3rem;
 }
-.header .actions .link  .projects .open{
+.header .pages .link  .projects .open{
     display: none;
     transition: all 1.5s ease;
 }
-.header .actions .link  .projects:active .close {
+.header .pages .link  .projects:active .close {
     display: none;
     transition: all 2.5s ease;
 }
-.header .actions .link  .projects:active .open {
+.header .pages .link  .projects:active .open {
     display: block;
     transition: all 0s ease;
 }
