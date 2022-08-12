@@ -264,3 +264,8 @@ img {
 .about-me .btn-1 {
     margin: 1rem auto;
 }
+.about-me .btn-1 a {
+    color: var(--font-btn);
+    display: flex;
+    align-items: center;
+}
