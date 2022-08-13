@@ -36,6 +36,9 @@ body {
     background: var(--body-color);
     overflow-x:  hidden;
 }
+main {
+    position: relative;
+}
 section {
     padding: 3.2rem 0 6.4rem;
 }
@@ -80,6 +83,16 @@ figure {
 img {
     object-fit: cover;
 }
+.scroll-top {
+    position: fixed;
+    bottom: 8rem;
+    right: 1.5rem;
+    display: none;
+}
+.scroll-top i {
+    padding: .5rem var(--small-font-size) .5rem 0;
+    color: var(--font-btn);
+}
 /*  Reusable classes*/
 .section--title{
     font-size: var(--h1-font-size);
@@ -112,6 +125,9 @@ img {
     display: flex;
     align-items: center;
 }
+.btn-2 {
+    background-color: var(--secound-color);
+}
 /* header */
 .header {
     position: fixed;
@@ -123,7 +139,6 @@ img {
     padding: 2rem 2.4rem 0.5rem ;
     border-top: 3px solid #E2E9E5;
 }
-
 .header .close-btn {
     position: absolute;
     right: .5rem;
