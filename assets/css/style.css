@@ -35,6 +35,8 @@ body {
 
     background: var(--body-color);
     overflow-x:  hidden;
+    /* overflow-y: hidden; */
+
 }
 main {
     position: relative;
@@ -283,4 +285,90 @@ img {
     color: var(--font-btn);
     display: flex;
     align-items: center;
+}
+/* skills  */
+.skills {
+    position: relative;
+}
+.skill-name {
+    font-family: Poppins;
+    font-size: 1.8rem;
+    text-transform: capitalize;
+    /* text-decoration: underline; */
+    margin-bottom: 5rem;
+    position: relative;
+}
+.skill-name::after {
+    content: " ";
+    width: 9rem;
+    height: .5rem;
+    background-color: var(--font-color);
+    position: absolute;
+    bottom: 0;
+    left: 1.5rem;
+}
+.skill-cards {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-snap-type: 2.4rem;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+.skill-cards .card {
+    border: 2px solid var(--title-color);
+    min-width: 20rem;
+    height: 22rem;
+    scroll-snap-align: start;
+    border-radius: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0;
+}
+.skill-cards .card:hover,
+.skill-cards .card:active {
+    background-color: var(--font-color);
+    color: var(--body-color);
+    border: var(--font-color);
+    transition: all .5s ease-in-out;
+
+}
+.skill-cards .card:hover figure img,
+.skill-cards .card:active figure img {
+    filter: invert(100%) saturate(0%) hue-rotate(100deg);
+}
+.skill-cards .card .card-description {
+    padding: 1rem 1rem 0;
+    text-align: center;
+}
+/* modal */
+.skills-modal {
+    height: 100vh;
+    backdrop-filter: blur(4px) sepia(10%);
+    width: 100vw;
+    /* background-color: transparent; */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    /* background-color: #43CB75; */
+    display: none;
+}
+.skills-modal i {
+    position: absolute;
+    top:1rem;
+    right: 2rem;
+    z-index: 15;
+    font-size: var(--h1-font-size);
+}
+.skills-modal .descriptions{
+    height: 100%;
+    width: 100vw;
+    position: absolute;
+    background-color: red;
+    top: 0;
+    bottom: 0;
+    border-radius: 2rem;
 }

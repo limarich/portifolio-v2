@@ -113,7 +113,78 @@
           </a>
         </button>
       </section>
-      <section id="skills" class="skills container"></section>
+      <section id="skills" class="skills container">
+        <h1 class="section--title">Habilidades</h1>
+        <h2 class="section--subtitle">Soft e Hard skills</h2>
+        <h3 class="skill-name">+Soft Skills</h3>
+        <ul class="skill-cards">
+          <li class="card">
+            <span class="card-name">Comunicativo</span>
+            <p class="card-description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
+            </p>
+          </li>
+          <li class="card">
+            <span class="card-name">Proativo</span>
+            <p class="card-description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
+            </p>
+          </li>
+          <li class="card">
+            <span class="card-name">Curioso</span>
+            <p class="card-description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
+            </p>
+          </li>
+          <li class="card">
+            <span class="card-name">Comunicativo</span>
+            <p class="card-description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
+            </p>
+          </li>
+          <li class="card">
+            <span class="card-name">Proativo</span>
+            <p class="card-description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
+            </p>
+          </li>
+          <li class="card">
+            <span class="card-name">Curioso</span>
+            <p class="card-description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
+            </p>
+          </li>
+        </ul>
+        <h3 class="skill-name">+Hard Skills</h3>
+        <ul class="skill-cards">
+          <li class="card" onclick="openModal()">
+            <figure>
+              <img src="./assets/images/frontend.svg" alt="" />
+            </figure>
+            <span class="card-name">Comunicativo</span>
+          </li>
+          <li class="card" onclick="openModal()">
+            <figure>
+              <img src="./assets/images/backend.svg" alt="" />
+            </figure>
+            <span class="card-name">Proativo</span>
+          </li>
+          <li class="card" onclick="openModal()">
+            <figure>
+              <img src="./assets/images/other.svg" alt="" />
+            </figure>
+            <span class="card-name">Curioso</span>
+          </li>
+        </ul>
+        <div class="skills-modal" id="modal">
+          <i
+            class="uil uil-times close-btn"
+            id="close-menu"
+            onclick="closeModal()"
+          ></i>
+          <div class="descriptions"></div>
+        </div>
+      </section>
       <section id="projects" class="projects container"></section>
       <section id="career" class="career container"></section>
       <section id="contact" class="career container"></section>
