@@ -16,6 +16,7 @@
     --secound-color: #43CB75;
     --secound-color-light: #57E089;
     --title-color: #000;
+    --input-color: #EEFCF3;
     /* fonts */
     --font-btn: #fff;
     --normal-font-size: 1.5rem;
@@ -430,4 +431,117 @@ img {
 .carousel-wrapper .row-2 .btn-1 span {
     font-size: 1.6rem;
 }
+/* timeline */
+.timeline .selectors{
+    display: flex;
+    justify-content: center;
+}
+.timeline .selectors .selector {
+    font-size: 2rem;
+    margin-left: 1rem;
+}
+.timeline .selectors .selector i{
+    margin-left: 1rem;
+}
+.timeline {
+    position: relative;
+}
+.timeline::after {
+    content: "";
+    position: absolute;
+    top:4rem;
+    bottom: -50%;
+    left: 50%;
+    width: .3rem;
+    background-color: var(--secound-color);
+    transform: translateX(-50%);
+    margin-bottom: 3rem;
+}
+.timeline .content .item {
+    max-width: 15rem;
+    position: relative;
+    top: 5rem;
+}
+.timeline .content .item::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    aspect-ratio: 1;
+    width: 2rem;
+    border-radius: 50%;
+    background-color: #43CB75;
+}
+.timeline .content .item p {
+    font-size: 1.3rem;
+}
+.timeline .content .item .title {
+    font-size: 1.4rem;
+}
+.timeline .content .item:nth-child(2n) {
+    left: 55%;
+}
+.timeline .content .item:nth-child(2n+1)::after {
+    right: -3.2rem;
+}
+.timeline .content .item:nth-child(2n)::after {
+    left: -2.8rem;
+}
+.timeline .content .item:nth-child(2n+1) {
+    left: 0;
+}
 /* Contatc */
+.contacts-links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.contacts-links .link {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-bottom: 2rem;
+}
+.contacts-links .link i {
+    font-size: 2.6rem;
+    color: var(--secound-color);
+}
+.contact .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contact .info .title {
+    font-size: 1.6rem;
+    color: var(--title-color);
+}
+/* email form */
+.form-control {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+.form-control .btn-1 {
+    align-self: center;
+}
+.form-control .form-row {
+    display: flex;
+}
+.form-control .form-row input, 
+.form-control .form-row textarea {
+    line-height: 4rem;
+    outline: none;
+    border: none;
+    border-radius: .6rem;
+    background-color: var(--input-color);
+    flex-grow: 1;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    padding-left: .5rem;
+    padding-bottom: 1rem;
+    box-shadow: inset 0 -3px  2px rgba(0, 0, 0, .2);
+}
+.form-control .form-row input::placeholder, 
+.form-control .form-row textarea::placeholder {
+    color: var(--title-color);
+} 
