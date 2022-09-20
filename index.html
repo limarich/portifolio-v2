@@ -17,35 +17,41 @@
         <i class="uil uil-times close-btn" id="close-menu"></i>
         <ul class="pages">
           <li class="link">
-            <a href="#home"><i class="uil uil-estate"></i> home</a>
+            <a href="#home"><i class="uil uil-estate mobile"></i> home</a>
           </li>
           <li class="link">
-            <a href="#about-me"><i class="uil uil-user"></i> sobre mim</a>
+            <a href="#about-me"
+              ><i class="uil uil-user mobile"></i> sobre mim</a
+            >
           </li>
           <li class="link">
             <a href="#skills"
-              ><i class="uil uil-clipboard-alt"></i>habilidades</a
+              ><i class="uil uil-clipboard-alt mobile"></i>habilidades</a
             >
           </li>
           <li class="link">
             <a href="#projects" class="projects"
-              ><i class="uil uil-folder close"></i
-              ><i class="uil uil-folder-open open"></i>
+              ><i class="uil uil-folder close mobile"></i
+              ><i class="uil uil-folder-open open mobile"></i>
               projetos
             </a>
           </li>
           <li class="link">
-            <a href="#career"><i class="uil uil-clock-eight"></i> carreira</a>
+            <a href="#career"
+              ><i class="uil uil-clock-eight mobile"></i> carreira</a
+            >
           </li>
           <li class="link">
-            <a href="#contact"><i class="uil uil-comments-alt"></i>contato</a>
+            <a href="#contact"
+              ><i class="uil uil-comments-alt mobile"></i>contato</a
+            >
           </li>
         </ul>
         <div class="actions">
           <span class="logo">Richard</span>
 
           <i class="uil uil-moon"></i>
-          <i class="uil uil-apps menu-btn"></i>
+          <i class="uil uil-apps menu-btn mobile"></i>
         </div>
       </nav>
     </header>
@@ -57,7 +63,12 @@
         </div>
         <div class="bio">
           <figure class="bio-picture">
-            <img src="./assets/images/blob.svg" alt="" srcset="" />
+            <img
+              src="./assets/images/blob.svg"
+              class="bio-picture-bg"
+              alt=""
+              srcset=""
+            />
             <img
               class="bio-picture-profile"
               src="./assets/images/profile-pic.png"
@@ -72,40 +83,51 @@
               desenvolvimento frontend e backend
             </p>
             <button class="btn-1">
-              <span>Contato</span>
-              <i class="uil uil-message"></i>
+              <a href="#contact">
+                <span>Contato</span>
+                <i class="uil uil-message"></i
+              ></a>
             </button>
           </div>
+        </div>
+        <div class="scroll-down">
+          <i class="uil uil-mouse-alt"></i>
+          <span>Scroll Down</span>
+          <i class="uil uil-arrow-down"></i>
         </div>
       </section>
       <section id="about-me" class="about-me container">
         <h1 class="section--title">Sobre mim</h1>
         <h2 class="section--subtitle">um pouquinho sobre quem eu sou</h2>
-        <figure>
-          <img src="./assets/images/me.png" alt="Sobre Richard Lima" />
-        </figure>
-        <p class="about-me--description">
-          Tenho 21 anos. Estou cursando Engenharia de Computação, na UNIVASF em
-          Juazeiro BA. Sou uma pessoa cheia de energia e motivação para sempre
-          estar aprendendo mais. <br /><br />
-          primeiro contato com programação se deu em 2019, quando iniciei minha
-          graduação e desde então venho trabalhando minhas habilidades focando
-          mais no desenvolvimento web.
-        </p>
-        <ul class="about-me--info">
-          <li class="topic">
-            <div class="topic-title">+03</div>
-            <span class="topic-description">anos de experiência</span>
-          </li>
-          <li class="topic">
-            <div class="topic-title">+10</div>
-            <span class="topic-description">projetos criados</span>
-          </li>
-          <li class="topic">
-            <div class="topic-title">02</div>
-            <span class="topic-description">empresas trabalhadas</span>
-          </li>
-        </ul>
+        <div class="about-me-box">
+          <figure class="box-1">
+            <img src="./assets/images/me.png" alt="Sobre Richard Lima" />
+          </figure>
+          <div class="box-2">
+            <p class="about-me--description">
+              Tenho 21 anos. Estou cursando Engenharia de Computação, na UNIVASF
+              em Juazeiro BA. Sou uma pessoa cheia de energia e motivação para
+              sempre estar aprendendo mais. <br /><br />
+              primeiro contato com programação se deu em 2019, quando iniciei
+              minha graduação e desde então venho trabalhando minhas habilidades
+              focando mais no desenvolvimento web.
+            </p>
+            <ul class="about-me--info">
+              <li class="topic">
+                <div class="topic-title">+03</div>
+                <span class="topic-description">anos de experiência</span>
+              </li>
+              <li class="topic">
+                <div class="topic-title">+10</div>
+                <span class="topic-description">projetos criados</span>
+              </li>
+              <li class="topic">
+                <div class="topic-title">02</div>
+                <span class="topic-description">empresas trabalhadas</span>
+              </li>
+            </ul>
+          </div>
+        </div>
         <button class="btn-1">
           <a download="" href="./assets/curriculo.pdf"
             ><span>Baixar CV</span>
@@ -285,6 +307,16 @@
         <i class="uil uil-arrow-up"></i>
       </button>
     </main>
+    <footer>
+      <div class="footer-logo">
+        <h2>Richard</h2>
+        <span>fullstack developer</span>
+      </div>
+      <div class="social-media">
+        <i class="uil uil-linkedin-alt"></i>
+        <i class="uil uil-github-alt"></i>
+      </div>
+    </footer>
     <script src="./assets/javascript/index.js"></script>
   </body>
 </html>

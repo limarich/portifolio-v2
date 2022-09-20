@@ -7,7 +7,7 @@
 }
 :root {
     scroll-behavior: smooth;
-    font-size: 10px;
+    font-size: 62.5%;
     font-family: 'Montserrat';
     color: var(--font-color);
     /* colors */
@@ -21,14 +21,112 @@
     --font-btn: #fff;
     --normal-font-size: 1.5rem;
     --large-font-size: 2.5rem;
-    --header-height: 4.8rem;
+    --header-height: 20rem;
     --h1-font-size: 3rem;
     --small-font-size: 1.3rem;
+    --profile-img-scale: 0.95;
+}
+/* Dark and light mode */
+@media (prefers-color-scheme: dark) {
+    :root {
+        /* --body-color: #0E1B13 !important; */
+    }
 }
 /* Media queries */
 @media screen and (min-width: 968px) {
+    :root {
+    --normal-font-size: 1.7rem;
+    --profile-img-scale: 1.4;
+
+    }
+    .header {
+        bottom: calc(100vh - 6rem) !important;
+        border-top: none !important;
+        border-bottom: 3px solid #E2E9E5;
+    }
+    .header .mobile {
+        display: none !important;
+    }
+    .header .pages {
+        display: flex !important;
+        margin-bottom: 0 !important;
+    }
+    .header .pages li {
+        margin: 0 2rem;
+    }
+    .header .pages li:hover {
+        color: var(--secound-color-light);
+    }
+    .header #navbar {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    .header .logo {
+        top: 50%;
+    }
+    .home {
+        margin-top: var(--header-height) !important;
+    }
+    .home .social-media {
+        position: absolute;
+        left: 2rem;
+        height: 20rem;
+    }
+    .bio {
+        flex-direction: row-reverse;
+        flex-wrap: nowrap !important; 
+    }
+    .bio-picture .bio-picture-bg{
+        margin-left: 2rem ;
+    }
+    .bio-description h2 {
+        font-size: 6rem !important;
+    }
+    .bio-description h3 {
+        font-size: 3.4rem !important;
+    }
+    .about-me .about-me-box {
+        display: flex;
+    }
+    .about-me .about-me-box .box-1 {
+        height: 40vh;
+    }
+    .about-me .about-me-box .box-1 img{
+        height: 100%;
+    }
+    .about-me .about-me-box .box-2 {
+        display: flex;
+        flex-direction: column;
+    }
+    }
+@media screen and (min-width: 375px) {
         :root {
-            --body-color: red;
+            
+        }
+        .bio-picture {
+            margin: 0 auto !important;
+        }
+        .bio-description {
+            flex: 100%;
+        }
+        .bio-description p{
+            max-width: 100% !important;
+        }
+    }
+@media screen and (min-width: 768px) {
+        :root {
+            --profile-img-scale: 1.2;
+        }
+        .container {
+            margin: auto;
+        }
+        .bio-picture-profile {
+            left: 8rem !important;
+           top: 0 !important;
+        }
+        .skill-cards {
+            justify-content: center ;
         }
     }
 body {
@@ -73,6 +171,8 @@ a {
     color: var(--font-color);
     text-decoration: none;
     font-size: var(--normal-font-size);
+    display: flex;
+    align-items: center;
 }
 i {
     transition: color 0s;
@@ -128,6 +228,9 @@ img {
     color: var(--font-btn);
     display: flex;
     align-items: center;
+}
+.btn-1 a {
+    color: var(--body-color);
 }
 .btn-2 {
     background-color: var(--secound-color);
@@ -234,8 +337,9 @@ img {
 .bio-picture {
     width: 20rem;
     position: relative;
-    margin-left: 10vw;
     margin-bottom: 2.5rem;
+    margin-left: 1rem;
+    transform: scale(var(--profile-img-scale));
 }
 .bio-picture-profile {
     width: 100%;
@@ -478,7 +582,7 @@ img {
     font-size: 1.4rem;
 }
 .timeline .content .item:nth-child(2n) {
-    left: 55%;
+    left: 50%;
 }
 .timeline .content .item:nth-child(2n+1)::after {
     right: -3.2rem;
@@ -526,6 +630,7 @@ img {
 }
 .form-control .form-row {
     display: flex;
+    flex-wrap: wrap;
 }
 .form-control .form-row input, 
 .form-control .form-row textarea {
@@ -545,3 +650,29 @@ img {
 .form-control .form-row textarea::placeholder {
     color: var(--title-color);
 } 
+/* footer */
+footer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 20;
+    padding: 3rem 2rem;
+    background-color: var(--secound-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--body-color);
+    font-family: Poppins;
+}
+footer h2 {
+    text-transform: capitalize;
+}
+footer .social-media {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+footer .social-media i {
+    font-size: 3.5rem;
+    margin-right: 2rem;
+}
