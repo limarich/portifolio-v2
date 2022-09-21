@@ -10,6 +10,9 @@
     font-size: 62.5%;
     font-family: 'Montserrat';
     color: var(--font-color);
+    --container-max-width: 100%;
+    --container-padding-left: 1.5rem;
+    --bio-description-max-width:  31rem;
     /* colors */
     --body-color: #FBFEFC;
     --font-color: #6A7C70;
@@ -33,85 +36,16 @@
     }
 }
 /* Media queries */
-@media screen and (min-width: 968px) {
-    :root {
-    --normal-font-size: 1.7rem;
-    --profile-img-scale: 1.4;
 
-    }
-    .header {
-        bottom: calc(100vh - 6rem) !important;
-        border-top: none !important;
-        border-bottom: 3px solid #E2E9E5;
-    }
-    .header .mobile {
-        display: none !important;
-    }
-    .header .pages {
-        display: flex !important;
-        margin-bottom: 0 !important;
-    }
-    .header .pages li {
-        margin: 0 2rem;
-    }
-    .header .pages li:hover {
-        color: var(--secound-color-light);
-    }
-    .header #navbar {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-    }
-    .header .logo {
-        top: 50%;
-    }
-    .home {
-        margin-top: var(--header-height) !important;
-    }
-    .home .social-media {
-        position: absolute;
-        left: 2rem;
-        height: 20rem;
-    }
-    .bio {
-        flex-direction: row-reverse;
-        flex-wrap: nowrap !important; 
-    }
-    .bio-picture .bio-picture-bg{
-        margin-left: 2rem ;
-    }
-    .bio-description h2 {
-        font-size: 6rem !important;
-    }
-    .bio-description h3 {
-        font-size: 3.4rem !important;
-    }
-    .about-me .about-me-box {
-        display: flex;
-    }
-    .about-me .about-me-box .box-1 {
-        height: 40vh;
-    }
-    .about-me .about-me-box .box-1 img{
-        height: 100%;
-    }
-    .about-me .about-me-box .box-2 {
-        display: flex;
-        flex-direction: column;
-    }
-    }
 @media screen and (min-width: 375px) {
         :root {
-            
+            --bio-description-max-width: 100%;
         }
         .bio-picture {
             margin: 0 auto !important;
         }
         .bio-description {
             flex: 100%;
-        }
-        .bio-description p{
-            max-width: 100% !important;
         }
     }
 @media screen and (min-width: 768px) {
@@ -129,6 +63,122 @@
             justify-content: center ;
         }
     }
+    @media screen and (min-width: 968px) {
+        :root {
+        --normal-font-size: 1.7rem;
+        --container-max-width: 100%;
+        --container-padding-left: 15rem;
+        --profile-img-scale: 1.4;
+        --bio-description-max-width: 96%;
+    }
+        .header {
+            bottom: calc(100vh - 6rem) !important;
+            border-top: none !important;
+            border-bottom: 3px solid #E2E9E5;
+        }
+        .header .mobile {
+            display: none !important;
+        }
+        .header .pages {
+            display: flex !important;
+            margin-bottom: 0 !important;
+        }
+        .header .pages li {
+            margin: 0 2rem;
+        }
+        .header .pages li:hover {
+            color: var(--secound-color-light);
+        }
+        .header #navbar {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+        .header .logo {
+            top: 50%;
+        }
+        .home {
+            margin-top: var(--header-height) !important;
+        }
+        .home .social-media {
+            position: absolute;
+            left: 2rem;
+            height: 20rem;
+        }
+        .bio {
+            flex-direction: row-reverse;
+            flex-wrap: nowrap !important; 
+        }
+        .bio .btn-1 {
+            margin-top: 8rem ;
+        }
+        .bio-picture {
+            left: 5rem;
+        }
+        .bio-picture .bio-picture-bg{
+            margin-left: 2rem ;
+        }
+        .bio-description h2 {
+            font-size: 6rem !important;
+        }
+        .bio-description h3 {
+            font-size: 3.4rem !important;
+        }
+        .about-me .about-me-box {
+            display: flex;
+        }
+        .about-me .about-me-box .box-1 {
+            height: 40vh;
+        }
+        .about-me .about-me-box .box-1 img{
+            height: 100%;
+        }
+        .about-me .about-me-box .box-2 {
+            display: flex;
+            flex-direction: column;
+        }
+        /* skills section */
+        #softskills {
+            width: 100%;
+            height: 400px;
+            display:flex;
+            justify-content: space-evenly;
+            align-items: center;
+            overflow:hidden;
+            gap: 0;
+        }
+        #softskills .card {
+            color: var(--body-color);
+            background-color: var(--font-color);
+            border: none;
+            width: 250px;
+            height: 100px;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            transform: rotate(-90deg);
+            cursor: pointer;
+            transition: all .5s ease;
+            box-shadow: -15px 0 5px rgba(0,0,0,.5);
+        }
+        #softskills .card p {
+            display: none;
+        }
+        #softskills .card.active {
+            transform: rotate(0deg);
+            background: var(--body-color);
+            color: var(--font-color);
+            border: 2px solid var(--font-color);
+            width: 400px;
+            height: 250px;
+            box-shadow: none;
+          }
+          #softskills .card.active p {
+            display: block;
+          }
+        }
 body {
     font-size: var(--normal-font-size);
 
@@ -218,8 +268,8 @@ img {
     text-align: center;
 }
 .container {
-    max-width: 76.8rem;
-    padding-left:  1.5rem;
+    max-width: var(--container-max-width);
+    padding-left:  var(--container-padding-left);
 }
 .btn-1 {
     padding: 1.8rem 1.2rem .8rem 1.5rem;
@@ -355,13 +405,30 @@ img {
     font-size: 3.3rem;
 }
 .bio-description p {
-    max-width: 31rem;
+    max-width: var(--bio-description-max-width);
     line-height: 2rem;
     margin-bottom: 4.5rem;
 }
 .bio-description mark {
     color: var(--secound-color-light);
     background: none;
+}
+.scroll-down {
+    position: absolute;
+    top: 42rem;
+    left: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 20rem;
+}
+.scroll-down span {
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.scroll-down i {
+    font-size: 4.5rem;
 }
 /* about me */
 .about-me--description {
