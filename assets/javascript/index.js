@@ -21,14 +21,3 @@ function goToTop() {
    document.body.scrollTop = 0;// For Safari
    document.documentElement.scrollTop = 0 // For Chrome, Firefox, IE and Opera
 }
-// control modal
-// close 
-function closeModal() {
-   let modal = document.querySelector('#modal');
-   modal.style.display = 'none';
-}
-// open
-function openModal() {
-   let modal = document.querySelector('#modal');
-   modal.style.display = 'block';
-}

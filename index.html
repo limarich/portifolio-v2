@@ -141,20 +141,20 @@
         <h3 class="skill-name">+Soft Skills</h3>
         <ul class="skill-cards" id="softskills"></ul>
         <h3 class="skill-name">+Hard Skills</h3>
-        <ul class="skill-cards">
-          <li class="card" onclick="openModal()">
+        <ul class="skill-cards" id="hardskills">
+          <li class="card" onclick="handleClickModal(0)">
             <figure>
               <img src="./assets/images/frontend.svg" alt="" />
             </figure>
             <span class="card-name">Comunicativo</span>
           </li>
-          <li class="card" onclick="openModal()">
+          <li class="card" onclick="handleClickModal(1)">
             <figure>
               <img src="./assets/images/backend.svg" alt="" />
             </figure>
             <span class="card-name">Proativo</span>
           </li>
-          <li class="card" onclick="openModal()">
+          <li class="card" onclick="handleClickModal(2)">
             <figure>
               <img src="./assets/images/other.svg" alt="" />
             </figure>
@@ -162,12 +162,7 @@
           </li>
         </ul>
         <div class="skills-modal" id="modal">
-          <i
-            class="uil uil-times close-btn"
-            id="close-menu"
-            onclick="closeModal()"
-          ></i>
-          <div class="descriptions"></div>
+          <ul class="content"></ul>
         </div>
       </section>
       <section id="projects" class="projects container">
@@ -282,5 +277,6 @@
     </footer>
     <script src="./assets/javascript/index.js"></script>
     <script src="./assets/javascript/cards.js"></script>
+    <script src="./assets/javascript/modal.js"></script>
   </body>
 </html>
