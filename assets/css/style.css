@@ -507,10 +507,10 @@ input::placeholder {
   display: flex;
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
-  scroll-snap-type: 2.4rem;
   gap: 2rem;
   margin-bottom: 2rem;
 }
+
 .skill-cards .card {
   border: 2px solid var(--title-color);
   min-width: 20rem;
