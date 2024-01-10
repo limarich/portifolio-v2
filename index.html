@@ -90,7 +90,7 @@
             </button>
           </div>
         </div>
-        <div class="scroll-down">
+        <div class="scroll-down onlydesktop">
           <i class="uil uil-mouse-alt"></i>
           <span>Scroll Down</span>
           <i class="uil uil-arrow-down"></i>
@@ -105,14 +105,15 @@
           </figure>
           <div class="box-2">
             <p class="about-me--description">
-              Tenho 21 anos. Estou cursando Engenharia de Computação, na UNIVASF
-              em Juazeiro BA. Sou uma pessoa cheia de energia e motivação para
-              sempre estar aprendendo mais. <br /><br />
+              Tenho <span id="ageDisplay"></span> anos. Estou cursando
+              Engenharia de Computação, na UNIVASF em Juazeiro BA. Sou uma
+              pessoa cheia de energia e motivação para sempre estar aprendendo
+              mais. <br /><br />
               primeiro contato com programação se deu em 2019, quando iniciei
               minha graduação e desde então venho trabalhando minhas habilidades
               focando mais no desenvolvimento web.
             </p>
-            <ul class="about-me--info">
+            <!-- <ul class="about-me--info">
               <li class="topic">
                 <div class="topic-title">+03</div>
                 <span class="topic-description">anos de experiência</span>
@@ -125,7 +126,7 @@
                 <div class="topic-title">02</div>
                 <span class="topic-description">empresas trabalhadas</span>
               </li>
-            </ul>
+            </ul> -->
           </div>
         </div>
         <button class="btn-1">
@@ -146,26 +147,26 @@
             <figure>
               <img src="./assets/images/frontend.svg" alt="" />
             </figure>
-            <span class="card-name">Comunicativo</span>
+            <span class="card-name">Frontend</span>
           </li>
           <li class="card" onclick="handleClickModal(1)">
             <figure>
               <img src="./assets/images/backend.svg" alt="" />
             </figure>
-            <span class="card-name">Proativo</span>
+            <span class="card-name">Backend</span>
           </li>
           <li class="card" onclick="handleClickModal(2)">
             <figure>
               <img src="./assets/images/other.svg" alt="" />
             </figure>
-            <span class="card-name">Curioso</span>
+            <span class="card-name">Outras habilidades</span>
           </li>
         </ul>
         <div class="skills-modal" id="modal">
           <ul class="content"></ul>
         </div>
       </section>
-      <section id="projects" class="projects container">
+      <!-- <section id="projects" class="projects container">
         <h1 class="section--title">Projetos</h1>
         <h2 class="section--subtitle">Meus trabalhos mais recentes</h2>
         <div class="carousel-wrapper">
@@ -196,7 +197,7 @@
             </button>
           </div>
         </div>
-      </section>
+      </section> -->
       <section id="career" class="career container">
         <h1 class="section--title">Carreira</h1>
         <h2 class="section--subtitle">Minha trajetória pessoal</h2>
@@ -278,5 +279,6 @@
     <script src="./assets/javascript/index.js"></script>
     <script src="./assets/javascript/cards.js"></script>
     <script src="./assets/javascript/modal.js"></script>
+    <script src="./assets/javascript/getAge.js"></script>
   </body>
 </html>
