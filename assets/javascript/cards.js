@@ -6,7 +6,7 @@ const SOFTSKILLS = [
     }, 
     {
         title: "Comunicativo",
-        description: "É muito importante para se ter uma boa dinâmica no ambiente de trabalho,  passar adiante coisas que sabemos e aprender coisas novas" 
+        description: "É muito importante para se ter uma boa dinâmica no ambiente de trabalho,  passar adiante o que sabemos e aprender coisas novas" 
     }, 
     {
         title: "Curioso",
