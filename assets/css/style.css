@@ -353,6 +353,7 @@ input::placeholder {
 .header .navbar.desactive .actions {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   font-size: 2.5rem;
 }
 .header .logo {
@@ -526,6 +527,10 @@ input::placeholder {
 #hardskills .card {
   cursor: pointer;
 }
+#hardskills::-webkit-scrollbar {
+  width: 0;
+}
+
 #hardskills .card figure img {
   height: 100px;
 }
@@ -890,7 +895,7 @@ footer .social-media i {
 }
 
 @media screen and (max-width: 375px) {
-  section {
+  #home {
     padding-top: 5.2rem;
   }
   /* timeline */
