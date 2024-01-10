@@ -112,7 +112,7 @@ function displayModal() {
   modal.classList.toggle("active");
   scrollTopBtn.classList.toggle("hidden");
 
-  // body.classList.toggle("locked");
+  body.classList.toggle("locked");
   modal.scrollIntoView();
 }
 function populatesModal(card) {
