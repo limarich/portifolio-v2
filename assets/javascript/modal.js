@@ -14,12 +14,32 @@ const FRONTEND = [
   {
     title: "JavaScript",
     experience: 4,
-    afinite: 0.85,
+    afinite: 0.9,
+  },
+  {
+    title: "Typescript",
+    experience: 4,
+    afinite: 0.65,
   },
   {
     title: "React",
     experience: 4,
-    afinite: 0.6,
+    afinite: 0.85,
+  },
+  {
+    title: "vue",
+    experience: 4,
+    afinite: 0.35,
+  },
+  {
+    title: "php",
+    experience: 4,
+    afinite: 0.35,
+  },
+  {
+    title: "Django",
+    experience: 4,
+    afinite: 0.55,
   },
 ];
 const BACKEND = [
@@ -33,6 +53,26 @@ const BACKEND = [
     experience: 3,
     afinite: 0.6,
   },
+  {
+    title: "Prisma",
+    experience: 3,
+    afinite: 0.55,
+  },
+  {
+    title: "Postgress",
+    experience: 3,
+    afinite: 0.75,
+  },
+  {
+    title: "Mysql",
+    experience: 3,
+    afinite: 0.75,
+  },
+  {
+    title: "MongoDB",
+    experience: 3,
+    afinite: 0.65,
+  },
 ];
 const OTHERS = [
   {
@@ -45,13 +85,23 @@ const OTHERS = [
     experience: 3,
     afinite: 0.7,
   },
+  {
+    title: "Git",
+    experience: 3,
+    afinite: 0.75,
+  },
+  {
+    title: "Scrum",
+    experience: 3,
+    afinite: 0.5,
+  },
 ];
 const abilities = [FRONTEND, BACKEND, OTHERS];
 const body = document.querySelector("body");
 const modal = document.querySelector(".skills-modal");
 const contentModal = document.querySelector(".skills-modal .content");
 
-console.log(abilities);
+// console.log(abilities);
 
 function handleClickModal(card) {
   displayModal();
@@ -60,7 +110,9 @@ function handleClickModal(card) {
 
 function displayModal() {
   modal.classList.toggle("active");
-  body.classList.toggle("locked");
+  scrollTopBtn.classList.toggle("hidden");
+
+  // body.classList.toggle("locked");
   modal.scrollIntoView();
 }
 function populatesModal(card) {
@@ -75,8 +127,7 @@ function formatData(data) {
   return `
     <li class="item">
         <span class="title">${data.title}</span>
-        <span class="experience" >${data.experience} ano(s)</span>
-        <span class="afinite">${data.afinite * 100}%</span>
+        <span class="afinite">${(data.afinite * 100).toPrecision(2)}%</span>
         <span class="progress-bar" style="--i: ${data.afinite}"></span>
     </li>`;
 }
